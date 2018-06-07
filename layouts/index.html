@@ -1,0 +1,91 @@
+--- 
+
+layout: page
+title: layouts
+permalink: /layouts/
+page_css_class: layouts
+css: layouts/layouts.css
+# amps_components uncomment any components you need or add them here and to the head.html file as a conditional
+amp-position-observer: yes
+amp-animation: yes
+
+---
+<h1>Flex Box: .md-flex-reverse</h1>
+<div class="flex md-flex-reverse  container">
+    <div id="a" class="padding-container">
+         <div class="padding-box">A: Hello I am div A!</div>
+    </div>
+    <div id="b" class="padding-container">
+         <div class="padding-box">B: Hello I am div B!</div>
+    </div>
+    <div id="c" class="padding-container">
+         <div class="padding-box">C: Hello I am div C!</div>
+    </div>
+</div>
+
+<h1>Flex Box: .flex-wrap</h1>
+<div class="sm-flex flex-wrap container">
+    <div id="a"  class="sm-col-6 md-col-4 padding-container">
+         <div class="padding-box"> A: Hello I am div A!</div>
+    </div>
+    <div id="b"  class="sm-col-6 md-col-4 padding-container">
+         <div class="padding-box"> B: Hello I am div B!</div>
+    </div>
+    <div id="c"  class="sm-col-12 md-col-4 padding-container">
+         <div class="padding-box"> C: Hello I am div C! Lorem ipsum! </div>
+    </div>
+</div>
+
+<div class="try-image">
+        {%- include components/amp-img/amp-img.html src="ips.jpg" alt="nice ips dude man" width="380" height="115" layout="responsive"  -%}
+</div>
+
+
+<!--
+alt
+media
+width
+height
+layout
+src
+ -->
+
+ <!-- animation   https://ampbyexample.com/visual_effects/basics_of_scrollbound_effects/ -->
+<div class="spacer">
+    The Fidet spinner
+</div>
+ <div class="fidget-spinner-scene">
+
+    <amp-position-observer on="scroll:spinAnimation.seekTo(percent=event.percent)"
+      intersection-ratios="1"
+      layout="nodisplay">
+    </amp-position-observer>
+  <div class="spinner">
+    <amp-img id="fidgetSpinnerImage"
+      width="1024"
+      height="1114"
+      layout="responsive"
+      src="fidget.png"
+      alt="Picture of a fidget spinner"></amp-img>
+ </div>
+
+</div>
+<amp-animation id="spinAnimation"
+  layout="nodisplay">
+  <script type="application/json">
+    {
+      "duration": "1",
+      "fill": "both",
+      "direction": "reverse",
+      "animations": [{
+        "selector": "#fidgetSpinnerImage",
+        "keyframes": [{
+          "transform": "rotate(360deg)"
+        }]
+      }]
+    }
+  </script>
+</amp-animation>
+<div class="spacer"></div>
+
+<!--end animation -->

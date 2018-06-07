@@ -1,0 +1,61 @@
+
+// https://css-tricks.com/scale-svg/
+@import 'vars';
+.site-footer{
+    position: relative;
+    color:white;
+    background-color:$dark_green;
+    .footer-bg {
+        min-height: 100px;
+        position: absolute; 
+        top:0;
+        left:0;
+        height: 0; 
+        width: 100%; 
+        padding: 0;
+        padding-bottom: calc(100% * 116/914); 
+        /* override this inline for aspect ratio other than square */
+    }
+    .footer-bg-image {
+        position: absolute; 
+        height: 100%; 
+        width: 100%; 
+        left: 0; 
+        top: 0;
+    }
+
+    .footer-content{
+       
+        position: absolute;
+        padding:0 $space-3 $space-3;
+        top:70px;
+        z-index:999;
+        background-color: inherit;
+        color:inherit;
+        width:100%;
+   
+    }
+
+    .btn-dir{
+        margin:$space-1 0;
+    }
+}
+
+.footer-content{
+    .footer-heading{
+        color:inherit;
+        border-top:1px solid;
+        border-bottom: 1px solid;
+        line-height: 2em;
+    }
+}
+.footer-logo{
+    position:relative;
+    left:-29px;
+    margin:$space-1 0;
+}
+
+
+.smile{
+    fill:$dark_green;
+}

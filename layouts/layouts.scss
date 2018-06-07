@@ -1,0 +1,77 @@
+@import 'vars';
+// test layouts a css here
+
+.layouts{
+    .container{
+        border: 2px solid green;
+        .padding-container{
+            padding:$space-1;
+        }
+        .padding-box{
+            border: 2px solid;
+            padding: $space-1 $space-2 $space-1;
+            height: 100%
+        }
+
+    }
+    .try-image{
+        width:200px;
+    }
+}
+
+.spacer{
+    height:200px;
+    border-top:2px solid;
+    padding-top:100px
+}
+.spinner{
+    width:400px;
+    background:rgb(250, 129, 150);
+}
+
+///////////////////////////////////////////////
+// animation https://ampbyexample.com/visual_effects/basics_of_scrollbound_effects/
+//////////////////////////////////////////////
+/*
+ * Fidget Spinner styles
+ */
+   .fidget-spinner-scene {
+    margin: 10px 20%;
+  }
+
+  /*
+   * Card transition styles
+   */
+  .card {
+    margin: 10%;
+    position: relative;
+  }
+  .card-title {
+    padding: 5%;
+    padding-right: 40%;
+    font-size: 50%;
+    font-weight: bold;
+    color: #FAFAFA;
+    transform: translateX(-100%);
+  }
+
+  /*
+   * Parallax window styles
+   */
+  .parallax-image-window {
+    overflow: hidden;
+  }
+  .parallax-image-window amp-img {
+    margin-bottom: -30%;
+  }
+
+  /*
+   * Carousel transition styles
+   */
+  .carousel-component {
+    margin-right: -60%;
+    margin-left: 60%;
+  }
+  .carousel-parent {
+    overflow: hidden;
+  }

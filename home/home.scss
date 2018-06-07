@@ -1,0 +1,92 @@
+// home page css declare as css in front matter to incude:
+// _includes/css/home/home.css
+@import "vars"; 
+.home-above-fold{
+	#homeHeroImage{
+		max-height: 950px;
+		overflow: hidden;
+	}
+
+}// .home-above-fold
+
+.home-page{
+	#services{
+		@media(min-width:1200px){
+			max-width:1200px;
+			position:relative;
+			top:-20px;
+		}
+		
+		margin:0 auto;
+		@media(min-width:761px){
+			display:flex;
+			flex-wrap: wrap;
+		}
+		div{
+			color:white;
+			@media(min-width:1071px){
+				width:33%;
+			}
+		}
+		h2{
+			color:inherit;
+			font-weight:200;
+			font-size:1.1em;
+		}
+		a.services-links{
+			color:inherit;
+			display:block;
+			height:100%;
+			border-left:5px solid;
+			padding: 1em;
+			@media(min-width:1071px){
+				&:before{
+					content:'';
+					float:left;
+					padding-top:80%;
+				}
+			}
+		}
+		ul{
+			list-style-type: none;
+			padding-left:1em;
+			margin-bottom:2em;
+			li{
+				position:relative;
+				margin:0;
+				padding-bottom: .8em;
+				&:before{
+					position:absolute;
+					left:-1em;
+					content: '✓';
+				}
+			}//li
+		}//ul
+		#crowns{
+			background-color: $dark_green;
+			@media(min-width:761px)and(max-width:1070px){
+				width:50%;
+			}
+		}
+		#ceramic{
+			background-color: $light_green;
+			@media(min-width:761px)and(max-width:1070px){
+				width:50%;
+			}
+		}
+		#implants{
+			background-color: $medium_green;
+			@media(min-width:761px)and(max-width:1070px){
+				width:100%;
+				text-align: center;
+				a{
+					display:inline-block;
+					border-left:none;
+					text-align:left;
+					
+				}
+
+			}
+		}
+	}//#services
+}//.home-page

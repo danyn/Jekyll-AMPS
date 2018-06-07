@@ -1,0 +1,126 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+# https://developers.facebook.com/docs/internationalization#locales
+# OG image is 1200 pixels x 627 pixels (1.91/1 ratio) -> don’t exceed the 5MB size limit.
+#variables
+#repository is required/helps github-pages gem it's a good idea to include
+# need to call api to find it from list of repos
+
+repository: 131331861
+repository_url: https://github.com/danyn/Jekyll-AMPS
+url: https://danyn.github.io
+baseurl: /Jekyll-AMPS
+permalink: /:categories/:title/
+country: CA
+lang: en
+title: A great artist or company with a fast website.
+description: Everyone is unique and so is this description
+company_name: Jane's Flying Circus
+company_nickname: Fancy Fliers of Canada
+nav: navs/nav-default.html
+sidebar: yes
+logo: /assets/logo.png
+social_image: assets/share_site.jpg
+email: your-email@example.com
+tel_pretty: (250) 111-2222
+tel: 2501112222
+author: Daniel Eisen
+twitter: true
+twitter_username: twitterMan
+github_username: danyn
+
+
+##The Navigation
+# Explicitly say which pages to include in the nav and dropdown
+# header_pages:
+#   - layouts/index.html
+#   - site-vars/site-vars.html
+#   - about/about.md
+#   - contact/contact.html
+#   - restorations/restorations.html
+#   - dropdown: Topics
+#     dropdownItems:
+#       - topics/topic-1/index.html
+#       - topics/topic-2/index.html
+##
+
+header_pages:
+  - index.html
+  - about/about.html
+  - contact/contact.html
+  - documentation/documentation.html
+
+
+#define global AMPS components. ie..any components that appear accross all pages
+# amps_components:
+amp-sidebar: yes
+amp-accordion: yes
+ 
+
+
+# Information for facebook pixil and marketing functions
+facebook:
+  admins: 3333
+  app_id: 1111
+  publisher: 2222
+  locale: en_CA 
+# Information for website verification codes often written into the the document head
+webmaster_verifications:
+  google: 938475394875
+  bing: ""
+  alexa: ""
+  yandex: ""
+  baidu: ""
+
+
+
+#schema.org settings which can also be used to reference these values in the site markup and rich snippets
+schema_org:
+  type: MedicalBusiness
+  city: Victoria
+  province: BC
+  postalCode: V8R 1J5
+  streetAddress: 1780 Fort Street Victoria
+
+
+# Build settings
+debug: no
+markdown: kramdown
+# theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - gulpfile.js
+  - package-lock.json
+  - package.json
+  - README.md
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+  - pages/about/about.scss
+  - pages/contact/contact.scss
+  - pages/restorations/restorations.scss
+  - pages/home/home.scss
+  
