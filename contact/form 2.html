@@ -1,27 +1,25 @@
 <div class="form-wrapper">
+    <div class="response-message">
+            <div class="form-heading">
+                <h2 class="form_title">Get In Touch With Us</h2>
+                <span class="form_description">Jekyll-AMPS</span>
+            </div>
+         <div [text]="formResponseText" class="status initial" [class]="formResponseClass"></div>
+    </div>
     <form
+        on="submit:AMP.setState(
+        {
+            formResponseText: 'Thanks for getting in touch. We will respond shortly.',
+            formResponseClass: 'status success' 
+        })"
         method="post"
-        action-xhr="https://localhost:8000"
+        action-xhr="https://getsimpleform.com/messages?form_api_token=abac523731b58d63c283659fad638c15"
         target="_top"
         class="contact-form"
         >
         
-
-        <div submit-success>
-            <template type="amp-mustache">
-                <p>Success! Thanks {{ "{{ first_name " }}}} an email has been sent and we will get back to you soon!</p>    
-            </template>    
-        </div>
-
-        <div submit-error>
-            Oops! Somehting went wrong!
-        </div>
-
-        <div class="unsent">
-            <p>We Look forward to hearing from you!</p>
-        </div>
          <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-         
+       
         <!-- all your input fields here.... -->
         
         <div class="contact-name text-fields clearfix">
@@ -43,7 +41,7 @@
             </div><!-- Email address -->
     
             <div class="input-group md-col md-col-6">
-                <input type="tel" name="Telephone_Number" id="telephoneNumber" value="" aria-label="Telephone number" tabindex="4" aria-invalid="false">
+                <input type="tel" name="TelephoneNumber" id="telephoneNumber" value="" aria-label="Telephone number" tabindex="4" aria-invalid="false">
                 <label for="telephoneNumber">Telephone number</label>
             </div><!-- telephone number -->
         </div><!-- contact-address -->

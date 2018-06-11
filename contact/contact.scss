@@ -26,7 +26,7 @@
 	}
 
 	.contact-form{
-		
+
 		.input-group{
 			padding: $space-1;
 		}
@@ -53,6 +53,7 @@
 		
 		}
 		input[type="submit"]{
+		
 			padding:$space-2;
 			min-width: 200px;
 			text-align: center;
@@ -65,10 +66,33 @@
 			}
 
 		}
-	}
+
+	} //.contact-form
 }
 
-.info{;
+// alerts
+
+.amp-form-submit-success [submit-success], .contact-form .unsent, .amp-form-submit-error [submit-error]{
+    text-align: center;
+    padding-top: 23px;
+    padding-bottom: 22px;
+    padding: 20px;
+}
+.amp-form-submit-success [submit-success]{
+	color: white;
+    background: #3eab3e;
+}
+
+.amp-form-submit-error [submit-error]{
+	color: white;
+    background: #17cbd8;
+}
+
+.amp-form-submit-success .unsent, .amp-form-submit-error .unsent{
+	display:none;
+}
+
+.info{
 	h2{
 		color: $logo-blue;
 	}

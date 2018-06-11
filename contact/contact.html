@@ -8,9 +8,10 @@ rel: contact
 css: contact/contact.css
 # nav: navs/nav-sidebar.html
 #add amps components required for this page if they are not global ones in config.yml
-amp-form: yes
 #amp-lightbox: yes
-amp-bind: yes
+#amp-bind: yes
+amp-mustache: yes
+amp-form: yes
 
 ---
 {%- include_relative form.html -%}
@@ -18,3 +19,4 @@ amp-bind: yes
 <div class="one-edge-shadow"></div>        
 
 {%- include_relative statement.html -%}
+

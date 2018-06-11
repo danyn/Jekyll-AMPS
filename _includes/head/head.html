@@ -68,6 +68,13 @@
 	{%- if page.amp-bind or site.amp-bind -%} 
 		<script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
 	{%- endif -%}
+
+	{%- if page.amp-mustache or site.amp-mustache -%} 
+		<script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.1.js"></script>
+	{%- endif -%}
+
+
+
 	
 	 
 	{%- include head/seo-group.html -%}
